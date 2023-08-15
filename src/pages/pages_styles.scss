@@ -1,0 +1,19 @@
+.home-container {
+  .home-search-input-and-car-img {
+    display: grid;
+    grid-template-columns: 60% 40%;
+    background-color: #edf1f6;
+    .home-header-input-group {
+      // border: 1px solid red;
+    }
+    .home-image-wrapper {
+      // border: 1px solid green;
+    }
+  }
+  .home-social {
+  }
+  .home-about {
+  }
+  .home-footer {
+  }
+}

@@ -1,0 +1,21 @@
+.sign-in-btn-container {
+  display: flex;
+  padding: 1.4rem 2.5rem;
+  justify-content: center;
+  align-items: center;
+  gap: 0.5rem;
+  border-radius: 0.625rem;
+  border: 1px solid #e4e7ec;
+  background: rgba(26, 138, 236, 0.9);
+  &:hover {
+    background: #1a89ec;
+  }
+  span {
+    color: #fcfcfd;
+    font-family: "Lexend";
+    font-size: 1.125rem;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+  }
+}

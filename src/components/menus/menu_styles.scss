@@ -1,0 +1,67 @@
+.appbar-container {
+  display: grid;
+  grid-template-columns: 15% 70% 15%;
+  align-items: center;
+  justify-items: center;
+  padding: 2.25rem 8.75rem;
+  .appbar-app-logo {
+  }
+  .appbar-desktop-menu {
+    // added all these classNames to increase specifity
+    .ant-menu {
+      &.ant-menu-root {
+        &.ant-menu-horizontal {
+          &.ant-menu-light {
+            &.app-navbar {
+              background: 0;
+              border-bottom: 0;
+              li.ant-menu-item {
+                span.ant-menu-title-content {
+                  // border: 1px solid red;
+                  color: #667085;
+                  font-family: Lexend;
+                  font-size: 1.125rem;
+                  font-style: normal;
+                  font-weight: 400;
+                  line-height: normal;
+                }
+                &.ant-menu-item-selected {
+                  //when click
+                  span {
+                    color: #344054;
+                    text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+                    font-weight: 800;
+                  }
+                }
+                &.ant-menu-item-active {
+                  //when hover
+                }
+              }
+              .ant-menu-submenu {
+                .ant-menu-submenu-title {
+                  display: inline-flex;
+                  gap: 0.75rem;
+                  // justify-content: flex-end;
+                  // align-items: flex-end;
+                  img {
+                    order: 2;
+                  }
+                  .ant-menu-title-content {
+                    color: #667085;
+                    font-family: "Lexend";
+                    font-size: 1.125rem;
+                    font-style: normal;
+                    font-weight: 400;
+                    line-height: normal;
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+  .appbar-signin-btn {
+  }
+}
