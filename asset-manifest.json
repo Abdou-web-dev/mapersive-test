@@ -1,0 +1,37 @@
+{
+  "files": {
+    "main.css": "/mapersive-test/static/css/main.9f6d95b2.css",
+    "main.js": "/mapersive-test/static/js/main.41803a73.js",
+    "static/js/787.42bb8ef1.chunk.js": "/mapersive-test/static/js/787.42bb8ef1.chunk.js",
+    "static/media/car.svg": "/mapersive-test/static/media/car.83b3a33b6bef9d90be0f6e880a7e3413.svg",
+    "static/media/book.svg": "/mapersive-test/static/media/book.8e58d2ba540619d87e14bc9a58bbf198.svg",
+    "static/media/business.svg": "/mapersive-test/static/media/business.76a4b629d796702ab87aecde9984090b.svg",
+    "static/media/language.svg": "/mapersive-test/static/media/language.641f6444c3cdb6f7744f2731dfabbe62.svg",
+    "static/media/linkedin.svg": "/mapersive-test/static/media/linkedin.3a7fa6cdef4c57236a49f218cc468561.svg",
+    "static/media/chevron_left.svg": "/mapersive-test/static/media/chevron_left.a1cc31ce499f010c24dad7cad823b5e0.svg",
+    "static/media/chevron_right.svg": "/mapersive-test/static/media/chevron_right.f8e76334552c307919b09a2ee602f85a.svg",
+    "static/media/instagram.svg": "/mapersive-test/static/media/instagram.50b36e7bebebe1d3bebe910d59cc5acb.svg",
+    "static/media/locations.svg": "/mapersive-test/static/media/locations.3e2be32f1ac57490f0f92e140c758006.svg",
+    "static/media/star_icon.svg": "/mapersive-test/static/media/star_icon.94cc2f6082e33013edd14a5becea9c74.svg",
+    "static/media/all_days.svg": "/mapersive-test/static/media/all_days.5e8959d548d60bf01cfc1a40f851ba97.svg",
+    "static/media/twitter.svg": "/mapersive-test/static/media/twitter.7ddb5df7eaaaf8ff03db06dbf81110bd.svg",
+    "static/media/arrow.svg": "/mapersive-test/static/media/arrow.17b3d4e75eeccc38d73e3e6bfe9e571a.svg",
+    "static/media/arrow_down.svg": "/mapersive-test/static/media/arrow_down.df09eb4e501e3f86508a8eaa47b3fcac.svg",
+    "index.html": "/mapersive-test/index.html",
+    "static/media/facebook.svg": "/mapersive-test/static/media/facebook.f270a7acc753c39f7d66810d97763261.svg",
+    "static/media/sign.svg": "/mapersive-test/static/media/sign.adde778662486e20b0e42271f1c6fb74.svg",
+    "static/media/sub_divider.svg": "/mapersive-test/static/media/sub_divider.ae4f6e368ef5ced04572f1a66dbfc3d2.svg",
+    "static/media/hamburger_menu_icon.svg": "/mapersive-test/static/media/hamburger_menu_icon.5ec25103848d4035e7ce2b1fc2608d75.svg",
+    "static/media/white_chevron.svg": "/mapersive-test/static/media/white_chevron.6ae0035a0a1c4ec8cb197803ea8da97d.svg",
+    "static/media/closeX.svg": "/mapersive-test/static/media/closeX.074452f90001a09cbbbe144269093df0.svg",
+    "static/media/app_icon.svg": "/mapersive-test/static/media/app_icon.6538abfd40d9b4c8bceeb6a36b1f948c.svg",
+    "static/media/footer_icon.svg": "/mapersive-test/static/media/footer_icon.9f3b7260eb767a1b45f282676293971e.svg",
+    "main.9f6d95b2.css.map": "/mapersive-test/static/css/main.9f6d95b2.css.map",
+    "main.41803a73.js.map": "/mapersive-test/static/js/main.41803a73.js.map",
+    "787.42bb8ef1.chunk.js.map": "/mapersive-test/static/js/787.42bb8ef1.chunk.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.9f6d95b2.css",
+    "static/js/main.41803a73.js"
+  ]
+}

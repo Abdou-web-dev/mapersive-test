@@ -1,0 +1,17 @@
+<svg
+            width="567"
+            height="8"
+            viewBox="0 0 567 8"
+            fill="none"
+            xmlns="http://www.w3.org/2000/svg"
+          >
+            <path d="M0 4H560" stroke="#98A2B3" />
+            <rect
+              x="559.5"
+              y="0.5"
+              width="7"
+              height="7"
+              rx="3.5"
+              stroke="#98A2B3"
+            />
+          </svg>
