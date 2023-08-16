@@ -4,7 +4,7 @@ import "./pages_styles.scss";
 function NoMatch() {
   return (
     <div className="no-match">
-      <h1>Sorry, the page you're looking for does not exist.</h1>
+      <h2>Sorry, the page you're looking for does not exist.</h2>
       <div>{/* <img src={noMatch} alt="" /> */}</div>
     </div>
   );

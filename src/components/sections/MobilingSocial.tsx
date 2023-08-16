@@ -1,9 +1,12 @@
 import { Button } from "antd";
 import white_chevron from "../../assets/img/white_chevron.svg";
+import { useMediaQuery } from "../../hooks/UseMediaQuery";
 import { MobilingHeader } from "../headers/MobilingHeader";
 import "./sections_styles.scss";
 
 export const MobilingSocial = () => {
+  const is_width_less_390 = useMediaQuery("(max-width: 390px)");
+
   return (
     <>
       <div className="mobiling-social-container">
@@ -38,7 +41,9 @@ export const MobilingSocial = () => {
                 }
                 className="data-priv"
               >
-                <span>Information on data privacy</span>
+                <span>
+                  {is_width_less_390 ? `Info` : `Information on data privacy`}
+                </span>
               </Button>
             </div>
           </div>

@@ -20,8 +20,10 @@
   position: relative;
   //   width: 28.75rem;
   height: 63.875rem;
+  // when changing   .home-search-input-and-car-img from grid-template-columns: 60% 40% //to grid-template-columns: 62% 38%; overflow here has been changed from hidden to visible so that  overflowing parts of the car image are disaplyed
   overflow: hidden; /* Hide overflowing parts of the car image */
   margin: 0 auto; /* Center the container horizontally */
+  // border: 1px solid;
   .car-image-bg {
     position: absolute;
     width: 13.75rem;
@@ -60,6 +62,12 @@
       height: fit-content;
       border: 0;
       box-shadow: none;
+    }
+    &.chevron-btns-small {
+      position: relative;
+      top: 0;
+      left: 0;
+      gap: 1.5rem;
     }
   }
 }
@@ -108,7 +116,7 @@
   h1 {
     color: #344054;
     font-family: Lexend;
-    font-size: 5rem;
+    font-size: 4.7rem;
     font-style: normal;
     font-weight: 600;
     line-height: normal;
@@ -120,17 +128,36 @@
     font-style: normal;
     font-weight: 400;
     line-height: normal;
+    max-width: 38rem;
+    // border: 1px solid;
   }
   .ant-input-search {
     &.mobiling-search-input {
       width: 50%;
       // display: flex;
       // width: 28.6875rem;
-      // height: 2.9375rem;
-      padding: 0.75rem 0rem 0.75rem 2rem;
+      // padding: 0.75rem 0rem 0.75rem 2rem;
       margin-bottom: 8.3rem;
       .ant-input-wrapper {
         .ant-input {
+          height: 2.2375rem;
+
+          &::placeholder {
+            color: #d0d5dd;
+            font-family: Lexend;
+            font-size: 1.125rem;
+            font-style: normal;
+            font-weight: 400;
+            line-height: normal;
+          }
+        }
+        .ant-input-group-addon {
+          position: relative;
+          bottom: 0.05rem;
+          .ant-input-search-button {
+            width: 2.9375rem;
+            height: 2.9375rem;
+          }
         }
       }
     }
@@ -149,6 +176,9 @@
   .mobiling-car-infos-tech-details-group {
     display: flex;
     gap: 3.75rem;
+  }
+  .mobiling-car-infos-sub-divider {
+    margin-top: 3rem;
   }
 }
 
@@ -486,6 +516,14 @@
 
 .subdivider-link-container {
   text-decoration: none;
+  .sub-divider-text {
+    color: #fcfcfd;
+    font-family: Lexend;
+    font-size: 1.125rem;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 2.25rem; /* 200% */
+  }
 }
 
 .social-link-container {
@@ -493,12 +531,4 @@
     translate: 2px;
     transition: 0.2s ease;
   }
-}
-.sub-divider-text {
-  color: #fcfcfd;
-  font-family: Lexend;
-  font-size: 1.125rem;
-  font-style: normal;
-  font-weight: 400;
-  line-height: 2.25rem; /* 200% */
 }

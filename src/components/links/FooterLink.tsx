@@ -5,6 +5,10 @@ export const FooterLink = ({ link }: { link: string }) => {
   return (
     <>
       <Link
+        style={{
+          maxWidth:
+            link === "Online service campaign VIN-checker" ? "210px" : "",
+        }}
         className="footer-link-container"
         to={link?.slice(0, 5)}
         target="_blank"

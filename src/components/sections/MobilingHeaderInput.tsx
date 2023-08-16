@@ -4,6 +4,7 @@ const { Search } = Input;
 
 export const MobilingHeaderInput = () => {
   const onSearch = (value: string) => console.log(value);
+
   return (
     <>
       <div className="mobiling-header-container">
@@ -14,10 +15,10 @@ export const MobilingHeaderInput = () => {
         </p>
         <Search
           className="mobiling-search-input"
-          // style={{ width: "20%" }}
           placeholder="Search"
           onSearch={onSearch}
           enterButton
+          allowClear
         />
       </div>
     </>

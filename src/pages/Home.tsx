@@ -14,6 +14,7 @@ function Home() {
           <MobilingHeaderInput />
           <MobilingCarInfos />
         </div>
+
         <div className="home-image-wrapper">
           <MobilingCarImage />
         </div>

@@ -1,29 +1,31 @@
-import { Menu as DesktopMenu, MenuProps } from "antd";
-import { useState } from "react";
+import type { MenuProps } from "antd";
+import { Menu } from "antd";
+import React, { useState } from "react";
 import { useNavigate } from "react-router-dom";
-import { SignInBtn } from "../buttons/SignInBtn";
-import { ArrowIcon } from "../icons/Icons";
-import { AppLogo } from "../logos/AppLogo";
 import "./menu_styles.scss";
 
-export const DesktopNavBar = ({}: {}) => {
-  const [current, setCurrent] = useState<string>("");
-
+export const MobileAppBar = ({
+  setOpenDrawer,
+  openDrawer,
+}: {
+  setOpenDrawer?: React.Dispatch<React.SetStateAction<boolean>> | any;
+  openDrawer?: boolean;
+}) => {
+  const [openKeys, setOpenKeys] = useState(["sub1"]);
   let navigate = useNavigate();
-  // const [borderBottom, setborderBottom] = useState("");
+
+  // submenu keys of first level
+  const rootSubmenuKeys = ["sub1", "sub2", "sub4"];
   const items: MenuProps["items"] = [
     {
       label: "Home",
       key: "home",
       icon: null,
-      // style: { background: "", borderBottom: borderBottom },
-      // className: "",
-      // onMouseEnter: () => {},
     },
     {
       label: "Service",
       key: "service_sub_1",
-      icon: <ArrowIcon />,
+      // icon: <ArrowIcon />,
       children: [
         {
           type: "group",
@@ -44,7 +46,7 @@ export const DesktopNavBar = ({}: {}) => {
     {
       label: "Product",
       key: "product_sub_1",
-      icon: <ArrowIcon />,
+      // icon: <ArrowIcon />,
       children: [
         {
           type: "group",
@@ -71,50 +73,55 @@ export const DesktopNavBar = ({}: {}) => {
 
   const handleMenuClick: MenuProps["onClick"] = (e) => {
     console.log("click ", e.key);
-    setCurrent(e.key);
+    // setCurrent(e.key);
     switch (e.key) {
       case "home":
         navigate("/");
+        setOpenDrawer(false);
         break;
       case "services:1":
         navigate("/service-subpage-1");
+        setOpenDrawer(false);
         break;
       case "services:2":
         // navigate("/service-subpage-2");
         break;
       case "product:1":
         navigate("/product-subpage-1");
+        setOpenDrawer(false);
         break;
       case "product:2":
         // navigate("/product-subpage-2");
         break;
       case "testimonial":
         navigate("testimonial");
+        setOpenDrawer(false);
         break;
       default:
         break;
     }
   };
 
+  const onOpenChange: MenuProps["onOpenChange"] = (keys) => {
+    const latestOpenKey = keys.find((key) => openKeys.indexOf(key) === -1);
+    if (latestOpenKey && rootSubmenuKeys.indexOf(latestOpenKey!) === -1) {
+      setOpenKeys(keys);
+    } else {
+      setOpenKeys(latestOpenKey ? [latestOpenKey] : []);
+    }
+  };
+
   return (
     <>
-      <div className="appbar-container">
-        <div className="appbar-app-logo">
-          <AppLogo></AppLogo>
-        </div>
-        <div className="appbar-desktop-menu">
-          <DesktopMenu
-            className="app-navbar"
-            onClick={handleMenuClick}
-            selectedKeys={[current]}
-            mode="horizontal"
-            items={items}
-            // defaultOpenKeys={["home"]}
-          />
-        </div>
-        <div className="appbar-signin-btn">
-          <SignInBtn></SignInBtn>
-        </div>
+      <div className="mobile-appbar-container">
+        <Menu
+          mode="inline"
+          openKeys={openKeys}
+          onOpenChange={onOpenChange}
+          style={{ width: 256 }}
+          items={items}
+          onClick={handleMenuClick}
+        />
       </div>
     </>
   );

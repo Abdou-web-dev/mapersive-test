@@ -1,8 +1,39 @@
+//defining screen breakpoints for responsivness
+$x-small: 0px;
+$medium_small: 450px;
+$small: 640px;
+$medium: 768px;
+$large: 1024px;
+$x-large: 1280px;
+$xx-large: 1536px;
+
+@mixin p_styles {
+  color: #344054;
+  font-family: Lexend;
+  font-size: 2rem;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+}
+
+@mixin text_styles {
+  color: #fcfcfd;
+  font-family: Lexend;
+  font-size: 1.25rem;
+  font-style: normal;
+  font-weight: 500;
+  line-height: normal;
+}
+
 .home-container {
   .home-search-input-and-car-img {
     display: grid;
-    grid-template-columns: 60% 40%;
+    // grid-template-columns: 60% 40%;
+    grid-template-columns: 58% 42%;
     background-color: #edf1f6;
+    padding: 0 5.75rem;
+    padding-right: 0;
+    height: 64rem;
     .home-header-input-group {
       // border: 1px solid red;
     }
@@ -15,5 +46,1077 @@
   .home-about {
   }
   .home-footer {
+  }
+  @media screen and (min-width: $small) and (max-width: $large) {
+    .home-search-input-and-car-img {
+      .home-header-input-group {
+        .mobiling-header-container {
+          h1 {
+            font-size: 3rem !important;
+            text-align: center;
+          }
+          p {
+            font-size: 1.5rem;
+            text-align: center;
+          }
+          .ant-input-search {
+            &.mobiling-search-input {
+              width: 70%;
+              margin-bottom: 5.3rem;
+              .ant-input-wrapper {
+                .ant-input {
+                  &::placeholder {
+                    font-weight: bolder;
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+      .mobiling-car-infos-container {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        h3 {
+          font-size: 2.25rem;
+        }
+        .mobiling-car-infos-tech-details-group {
+        }
+        .mobiling-car-infos-sub-divider {
+          margin-top: 1rem;
+        }
+      }
+      .home-image-wrapper {
+        .car-image-overlay {
+          justify-content: flex-start;
+          align-items: center;
+          transform: scale(1.6) !important;
+
+          .ant-image {
+            // .ant-image-img {        }
+          }
+        }
+      }
+    }
+    .home-social {
+      .mobiling-social-container {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+        background: #fcfcfd;
+        .mobiling-social-header {
+          align-self: center;
+          margin-left: 0rem;
+          margin-bottom: 1rem;
+        }
+        .mobiling-social-inner {
+          width: 80%;
+          margin: 0rem;
+          border-radius: 1.9375rem;
+          padding: 1.5rem;
+
+          .mobiling-social-inner-infos {
+            padding-top: 4rem;
+            .mobiling-social-inner-text-infos {
+              display: flex;
+              flex-direction: column;
+              justify-content: center;
+              align-items: center;
+              h3 {
+                font-size: 1.7rem;
+              }
+              p {
+                font-size: 0.9rem;
+                text-align: center;
+              }
+            }
+            .mobiling-social-inner-buttons-infos {
+              display: flex;
+              align-items: center;
+              justify-content: center;
+              gap: 1.5rem;
+              margin-top: 1rem;
+              button {
+                padding: 0.5rem 1rem;
+
+                img {
+                  position: relative;
+                  top: 0.2rem;
+                }
+                span {
+                  font-size: 1rem;
+                }
+              }
+              // button.agree {}
+              // button.data-priv {        }
+            }
+          }
+        }
+      }
+    }
+    .home-about {
+      .mobiling-about-container {
+        display: grid;
+        grid-template-columns: 1fr;
+        padding: 3.5rem;
+        padding-left: 5rem;
+        width: 85%;
+        justify-items: center;
+        align-content: center;
+
+        .mobiling-about-left-content {
+          margin: 0 5.75rem;
+          margin: 0;
+          display: flex;
+          flex-direction: column;
+          justify-content: center;
+          align-items: center;
+          .left-content-header {
+            h2 {
+              margin-bottom: 0;
+              margin-top: 0;
+            }
+          }
+          .left-content-small-paragraph-wrapper {
+            justify-self: center;
+            align-self: center;
+
+            p {
+              @include p_styles();
+              margin-top: 0.6rem;
+              margin-bottom: 2.25rem;
+            }
+          }
+
+          .left-content-big-paragraph-wrapper {
+            p {
+              @include p_styles();
+              margin-top: 0rem;
+              text-align: center;
+              font-size: 1.25rem;
+              line-height: 2.5rem;
+            }
+          }
+        }
+        .mobiling-about-right-content {
+          margin-right: 0rem;
+          .mobiling-about-right-content-inner {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            column-gap: 3.7rem;
+            row-gap: 3.25rem;
+            border-radius: 1.875rem;
+            background: #e3e6e9;
+            padding: 2.38rem 5.62rem;
+          }
+        }
+      }
+    }
+    .home-footer {
+      .mobiling-footer-container {
+        padding: 2rem;
+        .mobiling-footer-top-columns {
+          grid-template-columns: 1fr 1fr;
+          column-gap: 1rem;
+          row-gap: 4rem;
+          justify-items: center;
+          align-content: center;
+          .mobiling-footer-column1 {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-direction: column;
+            .mobiling-footer-column1-header {
+              display: flex;
+              .footer_icon {
+                width: 1.84769rem;
+              }
+              .mobiling-footer-column1-header-text {
+                display: flex;
+                flex-direction: column;
+                gap: 0.3rem;
+                margin-left: 0.8rem;
+                span.mobiling {
+                  @include text_styles();
+                }
+
+                span.auto {
+                  @include text_styles();
+                  font-weight: 300;
+                  font-size: 0.75rem;
+                }
+              }
+            }
+            .mobiling-footer-column1-footer {
+              p {
+                @include text_styles();
+                font-weight: 400;
+                font-size: 1rem;
+                margin-top: 1.5rem;
+                text-align: center;
+              }
+            }
+            .mobiling-footer-column1-social-icons {
+              // border: 1px solid white;
+              display: flex;
+              gap: 1.5rem;
+              margin-top: 2.5rem;
+            }
+          }
+          .mobiling-footer-column2 {
+            margin-left: 0rem;
+
+            .col2-header {
+              margin-bottom: 2.9rem;
+            }
+            .col2-links-group {
+              display: flex;
+              flex-direction: column;
+              gap: 1.75rem;
+            }
+          }
+
+          .mobiling-footer-column3 {
+            margin-left: 1.5rem;
+          }
+          .mobiling-footer-column2,
+          .mobiling-footer-column3,
+          .mobiling-footer-column4 {
+            .col2-header,
+            .col3-header,
+            .col4-header {
+              margin-bottom: 2.9rem;
+            }
+            .col2-links-group,
+            .col3-links-group,
+            .col4-links-group {
+              display: flex;
+              flex-direction: column;
+              gap: 1.75rem;
+            }
+          }
+        }
+        .mobiling-footer-divider {
+          display: flex;
+          justify-content: center;
+          margin: 2rem 0;
+        }
+        .mobiling-footer-sub__divider-content {
+          padding: 0 1.75rem;
+          padding: 0;
+          display: flex;
+          align-items: center;
+          gap: 3.12rem;
+          .sub__divider-content-group1 {
+            display: flex;
+            align-items: center;
+            gap: 2.75rem;
+
+            .sub__divider-content-group1-left {
+            }
+            .sub__divider-content-group1-right {
+              display: flex;
+              gap: 1.44rem;
+              margin-left: 1rem;
+            }
+          }
+          .sub__divider-content-group2 {
+            display: flex;
+            gap: 1rem;
+            align-items: center;
+
+            .language-btn {
+              padding: 0;
+              border: 0;
+              background: 0;
+              height: fit-content;
+              img.language {
+                width: 1.5rem;
+                // border: 1px solid white;
+                height: 1.5rem;
+              }
+            }
+            img.arrow {
+              width: 1.5rem;
+              height: 1.5rem;
+            }
+            span {
+              color: #fcfcfd;
+              font-family: Lexend;
+              font-size: 1.25rem;
+              font-style: normal;
+              font-weight: 600;
+              line-height: normal;
+            }
+          }
+        }
+      }
+    }
+  }
+  @media screen and (min-width: $small) and (max-width: $medium) {
+    .home-search-input-and-car-img {
+      .home-header-input-group {
+        .mobiling-header-container {
+          h1 {
+            font-size: 2.5rem !important;
+            text-align: center;
+          }
+          p {
+            font-size: 1.5rem;
+            text-align: center;
+          }
+          .ant-input-search {
+            &.mobiling-search-input {
+              width: 80%;
+              margin-bottom: 5.3rem;
+              .ant-input-wrapper {
+                .ant-input {
+                  &::placeholder {
+                    font-weight: bolder;
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+      .mobiling-car-infos-container {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        h3 {
+          font-size: 2.25rem;
+        }
+        .mobiling-car-infos-tech-details-group {
+        }
+        .mobiling-car-infos-sub-divider {
+          margin-top: 1rem;
+        }
+      }
+      .home-image-wrapper {
+        .car-image-overlay {
+          justify-content: flex-start;
+          align-items: center;
+          transform: scale(1.4) !important;
+          .chevron-btns-small {
+            margin-right: 2rem;
+            button {
+              cursor: pointer !important;
+              z-index: 999 !important;
+            }
+          }
+
+          .ant-image {
+            .ant-image-img {
+              // width: 80%;
+              height: auto;
+              vertical-align: middle;
+            }
+          }
+          .chevron-btns__and-car-img {
+            margin-top: -2rem;
+          }
+        }
+      }
+    }
+    .home-social {
+      .mobiling-social-container {
+        .mobiling-social-inner {
+          width: 70%;
+
+          .mobiling-social-inner-infos {
+            padding-top: 3rem;
+            .mobiling-social-inner-text-infos {
+              h3 {
+                font-size: 1.3rem;
+              }
+              p {
+                font-size: 0.8rem;
+                text-align: center;
+                width: 100%;
+              }
+            }
+            .mobiling-social-inner-buttons-infos {
+              gap: 1rem;
+              margin-top: 1rem;
+              button {
+                padding: 0.5rem 0.7rem;
+
+                img {
+                  position: relative;
+                  top: 0.2rem;
+                }
+                span {
+                  font-size: 0.85rem;
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+    .home-footer {
+      .mobiling-footer-container {
+        .mobiling-footer-sub__divider-content {
+          padding: 0;
+
+          .sub__divider-content-group1 {
+            display: flex;
+            align-items: center;
+            gap: 0.75rem;
+
+            .sub__divider-content-group1-left,
+            .sub__divider-content-group1-right {
+              .subdivider-link-container {
+                text-decoration: none;
+                .sub-divider-text {
+                  font-size: 0.8rem;
+                  line-height: 1rem;
+                }
+              }
+            }
+          }
+          .sub__divider-content-group2 {
+            gap: 0.5rem;
+
+            span {
+              font-size: 1rem;
+            }
+          }
+        }
+      }
+    }
+  }
+  @media screen and (min-width: $x-small) and (max-width: $small) {
+    .home-search-input-and-car-img {
+      display: grid;
+      grid-template-columns: 1fr !important;
+      min-height: 84rem;
+      padding: 0;
+      .home-header-input-group {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        .mobiling-header-container {
+          display: flex;
+          justify-content: center;
+          align-items: center;
+          flex-direction: column;
+          gap: 1.6rem;
+
+          h1 {
+            font-size: 1.5rem !important;
+            text-align: center;
+          }
+          p {
+            font-size: 1.4rem;
+            text-align: center;
+            // font-size : clamp(2rem, 10vw, 5rem);
+          }
+          .ant-input-search {
+            &.mobiling-search-input {
+              width: 60%;
+              // margin-right: 10rem !important;
+
+              margin-bottom: 5.3rem;
+              // margin: 0 auto;
+              .ant-input-wrapper {
+                .ant-input {
+                  &::placeholder {
+                    font-weight: bolder;
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+      .home-image-wrapper {
+        .car-image-container {
+          position: relative;
+          height: 63.875rem;
+          height: 20rem;
+
+          .car-image-bg {
+            // height: 5rem;
+          }
+
+          .car-image-overlay {
+            justify-content: flex-start;
+            align-items: center;
+            transform: scale(1); /* Adjust the scaling factor as needed */
+            .car-image {
+              // margin-top: 9.5rem;
+            }
+            .star_icon {
+              display: none;
+            }
+            .chevron-btns__and-car-img {
+              display: flex;
+              flex-direction: column;
+              justify-content: center;
+              align-items: center;
+              img.chev {
+                height: 1.3rem;
+                width: 1.3rem;
+              }
+              .ant-image {
+                .ant-image-img {
+                  // width: 80%;
+                  height: auto;
+                  vertical-align: middle;
+                }
+              }
+            }
+          }
+          .chevron-btns {
+            button {
+              z-index: 999;
+              padding: 0;
+              background: 0;
+              height: fit-content;
+              border: 0;
+              box-shadow: none;
+            }
+          }
+        }
+      }
+    }
+    .home-social {
+      .mobiling-social-container {
+        .mobiling-social-inner {
+          width: 70%;
+
+          .mobiling-social-inner-infos {
+            padding-top: 2rem;
+            .mobiling-social-inner-text-infos {
+              display: flex;
+              justify-content: center;
+              align-items: center;
+              flex-direction: column;
+              h3 {
+                font-size: 1.3rem;
+              }
+              p {
+                font-size: 0.8rem;
+                text-align: center;
+                // width: 100%;
+              }
+            }
+            .mobiling-social-inner-buttons-infos {
+              flex-direction: column;
+              gap: 1rem;
+              justify-content: center;
+              align-items: center;
+              margin-top: 1rem;
+              button {
+                padding: 0.5rem 0.7rem;
+                gap: 0;
+                .ant-btn-icon {
+                  margin-right: 0;
+                  img {
+                    position: relative;
+                    top: 0.2rem;
+                  }
+                }
+                span {
+                  font-size: 0.85rem;
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+    .home-about {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+
+      .mobiling-about-container {
+        display: grid;
+        grid-template-columns: 1fr;
+        padding: 2.5rem;
+        padding-left: 5rem;
+        padding: 0;
+        width: 80%;
+        justify-items: center;
+        align-content: center;
+
+        .mobiling-about-left-content {
+          margin: 0 5.75rem;
+          margin: 0;
+          display: flex;
+          flex-direction: column;
+          justify-content: center;
+          align-items: center;
+          .left-content-header {
+            h2 {
+              margin-bottom: 0;
+              margin-top: 0;
+            }
+          }
+          .left-content-small-paragraph-wrapper {
+            justify-self: center;
+            align-self: center;
+
+            p {
+              @include p_styles();
+              margin-top: 1.6rem;
+              margin-bottom: 2rem;
+              font-size: 1.6rem;
+              align-self: center;
+            }
+          }
+
+          .left-content-big-paragraph-wrapper {
+            p {
+              @include p_styles();
+              margin-top: 0rem;
+              text-align: center;
+              font-size: 1rem;
+              line-height: 2rem;
+            }
+          }
+        }
+        .mobiling-about-right-content {
+          margin-right: 0rem;
+          .mobiling-about-right-content-inner {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            column-gap: 2.7rem;
+            row-gap: 2.25rem;
+            border-radius: 1.875rem;
+            background: #e3e6e9;
+            padding: 2rem 2.62rem;
+            // width: 50%;
+          }
+        }
+      }
+    }
+    .home-footer {
+      .mobiling-footer-container {
+        padding: 2rem;
+        .mobiling-footer-top-columns {
+          grid-template-columns: 1fr 1fr;
+          column-gap: 1rem;
+          row-gap: 4rem;
+          justify-items: center;
+          align-content: center;
+          .mobiling-footer-column1 {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-direction: column;
+            .mobiling-footer-column1-header {
+              display: flex;
+              .footer_icon {
+                width: 1.84769rem;
+              }
+              .mobiling-footer-column1-header-text {
+                display: flex;
+                flex-direction: column;
+                gap: 0.3rem;
+                margin-left: 0.8rem;
+                span.mobiling {
+                  @include text_styles();
+                }
+
+                span.auto {
+                  @include text_styles();
+                  font-weight: 300;
+                  font-size: 0.75rem;
+                }
+              }
+            }
+            .mobiling-footer-column1-footer {
+              p {
+                @include text_styles();
+                font-weight: 400;
+                font-size: 1rem;
+                margin-top: 1.5rem;
+                text-align: center;
+              }
+            }
+            .mobiling-footer-column1-social-icons {
+              // border: 1px solid white;
+              display: flex;
+              gap: 1.5rem;
+              margin-top: 2.5rem;
+            }
+          }
+          .mobiling-footer-column2 {
+            margin-left: 0rem;
+
+            .col2-header {
+              margin-bottom: 2.9rem;
+            }
+            .col2-links-group {
+              display: flex;
+              flex-direction: column;
+              gap: 1.75rem;
+            }
+          }
+
+          .mobiling-footer-column3 {
+            margin-left: 1.5rem;
+          }
+          .mobiling-footer-column2,
+          .mobiling-footer-column3,
+          .mobiling-footer-column4 {
+            .col2-header,
+            .col3-header,
+            .col4-header {
+              margin-bottom: 2.9rem;
+            }
+            .col2-links-group,
+            .col3-links-group,
+            .col4-links-group {
+              display: flex;
+              flex-direction: column;
+              gap: 1.75rem;
+            }
+          }
+        }
+        .mobiling-footer-divider {
+          display: flex;
+          justify-content: center;
+          margin: 2rem 0;
+        }
+        .mobiling-footer-sub__divider-content {
+          padding: 0;
+
+          .sub__divider-content-group1 {
+            display: flex;
+            align-items: center;
+            gap: 0.75rem;
+
+            .sub__divider-content-group1-left,
+            .sub__divider-content-group1-right {
+              .subdivider-link-container {
+                text-decoration: none;
+                .sub-divider-text {
+                  font-size: 0.8rem;
+                  line-height: 1rem;
+                }
+              }
+            }
+          }
+          .sub__divider-content-group2 {
+            gap: 0.5rem;
+
+            span {
+              font-size: 1rem;
+            }
+          }
+        }
+      }
+    }
+  }
+  @media screen and (min-width: $small) and (max-width: 700px) {
+    .home-search-input-and-car-img {
+      .home-header-input-group {
+        .mobiling-header-container {
+          margin-right: 3rem;
+        }
+      }
+    }
+  }
+  @media screen and (min-width: 500px) and (max-width: 640px) {
+    .mobiling-car-infos-container {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      h3 {
+        font-size: 2.25rem;
+      }
+      .mobiling-car-infos-tech-details-group {
+      }
+      .mobiling-car-infos-sub-divider {
+        margin-top: 1rem;
+      }
+    }
+  }
+  @media screen and (max-width: 400px) {
+    .mobiling-car-infos-container {
+      .h3-wrapper {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        h3 {
+          font-size: 2.25rem;
+          max-width: 80%;
+          text-align: center;
+        }
+      }
+      .mobiling-car-infos-tech-details-group {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        gap: 1rem;
+
+        .tech-detail-container {
+          display: flex;
+          justify-content: center;
+          align-items: center;
+          span.label {
+            align-self: center;
+          }
+        }
+      }
+      .mobiling-car-infos-sub-divider {
+        display: none;
+      }
+    }
+  }
+  @media screen and (max-width: 430px) {
+    .home-about {
+      .mobiling-about-container {
+        .mobiling-about-right-content {
+          margin-right: 0rem;
+          .mobiling-about-right-content-inner {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            column-gap: 1rem;
+            row-gap: 1rem;
+            border-radius: 1.875rem;
+            background: #e3e6e9;
+            padding: 1.4rem;
+            // border: 1px solid;
+          }
+        }
+      }
+    }
+  }
+  @media screen and (max-width: 310px) {
+    .home-about {
+      .mobiling-about-container {
+        .mobiling-about-right-content {
+          margin-right: 0rem;
+          .mobiling-about-right-content-inner {
+            grid-template-columns: 1fr;
+          }
+        }
+      }
+    }
+  }
+  @media screen and (max-width: 600px) {
+    .home-footer {
+      .mobiling-footer-container {
+        padding: 2rem;
+        .mobiling-footer-top-columns {
+          grid-template-columns: 1fr;
+          column-gap: 1rem;
+          row-gap: 4rem;
+          justify-items: center;
+          align-content: center;
+          .mobiling-footer-column1 {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-direction: column;
+            .mobiling-footer-column1-header {
+              display: flex;
+              .footer_icon {
+                width: 1.84769rem;
+              }
+              .mobiling-footer-column1-header-text {
+                display: flex;
+                flex-direction: column;
+                gap: 0.3rem;
+                margin-left: 0.8rem;
+                span.mobiling {
+                  @include text_styles();
+                }
+
+                span.auto {
+                  @include text_styles();
+                  font-weight: 300;
+                  font-size: 0.75rem;
+                }
+              }
+            }
+            .mobiling-footer-column1-footer {
+              p {
+                @include text_styles();
+                font-weight: 400;
+                font-size: 1rem;
+                margin-top: 1.5rem;
+                text-align: center;
+              }
+            }
+            .mobiling-footer-column1-social-icons {
+              // border: 1px solid white;
+              display: flex;
+              gap: 1.5rem;
+              margin-top: 2.5rem;
+            }
+          }
+          .mobiling-footer-column2 {
+            margin-left: 0rem;
+
+            .col2-header {
+              margin-bottom: 2.9rem;
+            }
+            .col2-links-group {
+              display: flex;
+              flex-direction: column;
+              gap: 1.75rem;
+            }
+          }
+
+          .mobiling-footer-column3 {
+            margin-left: 1.5rem;
+          }
+          .mobiling-footer-column2,
+          .mobiling-footer-column3,
+          .mobiling-footer-column4 {
+            .col2-header,
+            .col3-header,
+            .col4-header {
+              margin-bottom: 2.9rem;
+            }
+            .col2-links-group,
+            .col3-links-group,
+            .col4-links-group {
+              display: flex;
+              flex-direction: column;
+              gap: 1.75rem;
+            }
+          }
+        }
+        .mobiling-footer-divider {
+          width: 50%;
+          margin: 2rem auto;
+        }
+        .mobiling-footer-sub__divider-content {
+          padding: 0;
+          gap: 3rem;
+          flex-direction: column;
+          .sub__divider-content-group1 {
+            display: flex;
+            align-items: center;
+            gap: 0.35rem;
+            .sub__divider-content-group1-right {
+              gap: 1rem;
+            }
+            .sub__divider-content-group1-left,
+            .sub__divider-content-group1-right {
+              .subdivider-link-container {
+                text-decoration: none;
+                .sub-divider-text {
+                  font-size: 0.8rem;
+                  line-height: 1rem;
+                }
+              }
+            }
+          }
+          .sub__divider-content-group2 {
+            gap: 0.5rem;
+
+            span {
+              font-size: 1rem;
+            }
+          }
+        }
+      }
+    }
+  }
+  @media screen and (min-width: $small) and (max-width: $large) {
+    .home-search-input-and-car-img {
+      display: grid;
+      grid-template-columns: 1fr !important;
+      padding: 0 5.75rem;
+      min-height: 84rem;
+
+      .home-header-input-group {
+        .mobiling-header-container {
+          display: flex;
+          flex-direction: column;
+          justify-content: center;
+          align-items: center;
+          h1 {
+            font-size: 4.7rem;
+            text-align: center;
+          }
+          p {
+            font-size: 1.5rem;
+          }
+        }
+      }
+      .home-image-wrapper {
+        .car-image-container {
+          position: relative;
+          height: 63.875rem;
+
+          .car-image-bg {
+            height: 18rem;
+          }
+
+          .car-image-overlay {
+            justify-content: flex-start;
+            align-items: center;
+            transform: scale(1.7); /* Adjust the scaling factor as needed */
+            .car-image {
+              margin-top: 9.5rem;
+            }
+            .star_icon {
+              display: none;
+            }
+            .chevron-btns__and-car-img {
+              display: flex;
+              flex-direction: column;
+              justify-content: center;
+              align-items: center;
+              img.chev {
+                height: 1.3rem;
+                width: 1.3rem;
+              }
+              .ant-image {
+                .ant-image-img {
+                  // width: 80%;
+                  height: auto;
+                  vertical-align: middle;
+                }
+              }
+            }
+          }
+          .chevron-btns {
+            button {
+              z-index: 999;
+              padding: 0;
+              background: 0;
+              height: fit-content;
+              border: 0;
+              box-shadow: none;
+            }
+          }
+        }
+      }
+    }
+  }
+}
+.car-overlay__less-640,
+.no-match {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding-bottom: 30rem;
+  h2 {
+    color: #98a2b3;
+    font-family: Lexend;
+    font-size: 1.5rem;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+    max-width: 38rem;
   }
 }

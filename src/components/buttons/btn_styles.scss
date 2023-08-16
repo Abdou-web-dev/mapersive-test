@@ -18,4 +18,16 @@
     font-weight: 400;
     line-height: normal;
   }
+  &.sign-in-small {
+    background: rgba(78, 89, 99, 0.05);
+    padding: 1.5rem 0.5rem;
+    border: 0;
+    img {
+      position: relative;
+      top: 0.15rem;
+    }
+    &:hover {
+      background: rgba(78, 89, 99, 0.15);
+    }
+  }
 }
